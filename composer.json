@@ -1,0 +1,16 @@
+{
+    "name": "pravtz/sending-email-slim-php",
+    "description": "app that sends standardized emails to a group of specialized customers",
+    "type": "slim",
+    "require": {
+        "slim/slim": "^4.7",
+        "slim/psr7": "^1.3",
+        "slim/twig-view": "^3.2",
+        "vlucas/phpdotenv": "^5.3"
+    },
+    "autoload": {
+        "psr-4": {
+            "app\\": "app"
+        }
+    }
+}
