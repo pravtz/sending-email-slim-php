@@ -1,0 +1,25 @@
+body{
+    color: white;
+    height: 100vh;
+    background-color: #e9e9e9;
+}
+nav{
+    height: 6%;
+}
+
+main{
+    height: 84vh;
+}
+
+.footer-main{
+    width: 100%;
+    background-color: #ddd;
+    height: 6vh;
+
+}
+.footer-main-text{
+    padding-top: 10px;
+    font-size: 1em;
+    color: white;
+    text-align: center;
+}

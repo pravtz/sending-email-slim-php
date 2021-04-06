@@ -1,0 +1,23 @@
+{% extends "layout/master.html" %}
+{% block title %}Login {% endblock %}
+{% block cssAddPage %}<link rel="stylesheet" href="assets/css/login-styled.css">{% endblock %}
+{% block content %}
+
+<main class="login">
+    <div class="login-wrapper">
+        <form>
+
+            <div class="login-input-form">
+                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
+                <input type="password" class="form-control" id="passwd" placeholder="Password">
+            </div>
+
+
+
+            <button type="submit" class="btn btn-outline-dark">Enviar</button>
+        </form>
+    </div>
+
+</main>
+
+{% endblock %}

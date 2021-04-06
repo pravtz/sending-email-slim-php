@@ -6,6 +6,8 @@ class Welcome extends Base
 {
     public function index($request, $response){
 
-        return $this->getTwig()->render($response, $this->setTwig('/page/welcome'));
+        return $this->getTwig()->render($response, $this->setTwig('/page/welcome') , [
+            'nameProject' => NAME_PROJECT
+        ]);
     }
 }

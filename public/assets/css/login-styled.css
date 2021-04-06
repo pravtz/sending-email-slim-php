@@ -1,0 +1,20 @@
+.login {
+
+    color: #999;
+}
+.login-wrapper{
+    margin: 30vh auto;
+    max-width: 300px;
+}
+.login-input-form{
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+.login-input-form input{
+    margin-bottom: 10px;
+}
+.form-control{
+    background: #e9e9e9;;
+}
