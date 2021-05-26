@@ -1,7 +1,7 @@
 <?php
 
 
-namespace App\controllers;
+namespace app\controllers;
 
 
 class RegisterController extends Base
@@ -15,6 +15,7 @@ class RegisterController extends Base
     }
     public  function logOut($request, $response)
     {
+
     }
 
     public function singUp($request, $response)

@@ -1,6 +1,5 @@
 <?php
-
-namespace App\traits;
+namespace app\traits;
 
 use Slim\Views\Twig;
 use Exception;
@@ -17,6 +16,6 @@ trait BaseViews
     }
     public function setTwig($name)
     {
-        return $name . EXT_VIEWS;
+        return $name.EXT_VIEWS;
     }
 }

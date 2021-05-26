@@ -1,19 +1,12 @@
 <?php
 
-namespace App\controllers;
-
-use App\database\models\User;
+namespace app\controllers;
 
 class Welcome extends Base
 {
-    public function index($request, $response)
-    {
-        $user = new User;
+    public function index($request, $response){
 
-        $users = $user->findAll();
-
-
-        return $this->getTwig()->render($response, $this->setTwig('/page/welcome'), [
+        return $this->getTwig()->render($response, $this->setTwig('/page/welcome') , [
             'nameProject' => NAME_PROJECT
         ]);
     }

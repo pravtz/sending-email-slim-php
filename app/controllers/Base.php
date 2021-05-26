@@ -1,10 +1,10 @@
 <?php
 
 
-namespace App\controllers;
+namespace app\controllers;
 
 
-use App\traits\BaseViews;
+use app\traits\BaseViews;
 
 abstract class Base
 {
