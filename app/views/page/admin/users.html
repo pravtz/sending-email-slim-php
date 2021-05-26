@@ -1,0 +1,47 @@
+{% extends "layout/master.html" %}
+{% block title %}Painel Admin {% endblock %}
+{% block cssAddPage %}
+<link rel="stylesheet" href="../assets/css/admin-styled.css">
+{% endblock %}
+{% block content %}
+{% include "components/header.html" %}
+<main class="container">
+    <h1>PAINEL ADMINISTRATIVO</h1>
+
+    <hr />
+    <table class="table">
+        <thead>
+            <tr>
+                <th scope="col">#</th>
+                <th scope="col">Nome</th>
+                <th scope="col">Sobrenome</th>
+                <th scope="col">Email</th>
+                <th scope="col">Hierarquia</th>
+                <th scope="col">Data Cadastro</th>
+                <th scope="col">-</th>
+
+            </tr>
+        </thead>
+        <tbody>
+            {% for user in users %}
+            <tr>
+                <th scope="row">{{user.id}}</th>
+                <td>{{user.first_name}}</td>
+                <td>{{user.last_name}}</td>
+                <td>{{user.email}}</td>
+                <td>{{user.hierarchy}}</td>
+                <td>{{user.create_at}}</td>
+                <td>
+                    <button class="btn">Editar</button>
+                    <button class="btn">ver</button>
+                    <button class="btn">deletar</button>
+                    <button class="btn">bloqquiar</button>
+                </td>
+
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</main>
+{% include "components/footer.html" %}
+{% endblock %}

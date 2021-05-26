@@ -1,20 +1,30 @@
 {% extends "layout/master.html" %}
 {% block title %}Login {% endblock %}
-{% block cssAddPage %}<link rel="stylesheet" href="assets/css/login-styled.css">{% endblock %}
+{% block cssAddPage %}
+<link rel="stylesheet" href="assets/css/login-styled.css">{% endblock %}
 {% block content %}
 
 <main class="login">
     <div class="login-wrapper">
         <form>
+            <form>
+                <div class="form-group">
+                    <label for="email">Email</label>
+                    <input type="email" class="form-control" id="email" aria-describedby="emailHelp"
+                        placeholder="Seu email">
+                </div>
+                <div class="form-group">
+                    <label for="passwd">Senha</label>
+                    <input type="password" class="form-control" id="passwd" placeholder="Password">
+                </div>
+                <div class="form-group form-check">
+                    <input type="checkbox" class="form-check-input" id="exampleCheck1">
+                    <span>Lembrar da Senha</span>
+                </div>
+                <button type="submit" class="btn btn-primary">Enviar</button>
+            </form>
 
-            <div class="login-input-form">
-                <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Email">
-                <input type="password" class="form-control" id="passwd" placeholder="Password">
-            </div>
 
-
-
-            <button type="submit" class="btn btn-outline-dark">Enviar</button>
         </form>
     </div>
 
