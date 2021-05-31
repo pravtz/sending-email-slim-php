@@ -8,7 +8,12 @@
 <main class="container">
     <h1>PAINEL ADMINISTRATIVO</h1>
 
+
     <hr />
+
+    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#modalExemplo">
+        Abrir modal de demonstração
+    </button>
     <table class="table">
         <thead>
             <tr>
@@ -22,8 +27,8 @@
 
             </tr>
         </thead>
-        <tbody>
-            {% for user in users %}
+        <tbody class="js__content-tbody">
+            <!-- {% for user in users %}
             <tr>
                 <th scope="row">{{user.id}}</th>
                 <td>{{user.first_name}}</td>
@@ -39,9 +44,48 @@
                 </td>
 
             </tr>
-            {% endfor %}
+            {% endfor %} -->
+
         </tbody>
     </table>
 </main>
+<!-- Modal -->
+<div class="modal fade" id="modalExemplo" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+    aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Título do modal</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Fechar">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <!-- conteudo do modal-->
+                {% include "components/users/formUser.html" %}
+                <!-- end conteudo do modal-->
+
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+                <button type="button" class="btn btn-primary">Salvar mudanças</button>
+            </div>
+
+        </div>
+    </div>
+</div>
+<script>
+    var xhr = new XMLHttpRequest();
+
+
+
+    xhr.open("GET", "http://localhost:8080/api/v1/users")
+    xhr.send();
+    var valor;
+
+
+    console.log(xhr.response.users)
+</script>
+
 {% include "components/footer.html" %}
 {% endblock %}

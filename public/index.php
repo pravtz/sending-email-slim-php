@@ -12,6 +12,7 @@ $dotenv->load();
 require '../app/config/views.php';
 require '../app/config/database.php';
 require '../app/routes/web.php';
+require '../app/routes/api.php';
 
 
 $app->run();
