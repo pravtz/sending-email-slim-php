@@ -20,6 +20,9 @@ abstract class Base
         $this->instaceConn = Connection::getConnect();
         if (!$this->instaceConn) {
             $this->instaceErr = Connection::getError();
+            echo "<pre>";
+            var_dump($this->instaceErr );
+            die();
         }
     }
 

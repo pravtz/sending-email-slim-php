@@ -23,6 +23,7 @@ class Connection
                 );
             } catch (PDOException $exception) {
                 self::$errorConnection = $exception;
+                
             }
         }
         return self::$instanceConnection;
